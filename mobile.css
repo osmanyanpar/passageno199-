@@ -1,0 +1,38 @@
+/* Mobile improvements for visitors arriving from Instagram. */
+@media (max-width:700px) {
+  html, body { overflow-x:hidden; }
+  .container, .nav.container { width:calc(100% - 32px); }
+  .nav .logo { width:170px !important; height:80px !important; transform:translateY(4px) !important; }
+  .nav .logo img { width:346px !important; transform:translate(-92px,-112px) !important; }
+  .menu-toggle { display:none !important; }
+  nav { display:flex !important; position:absolute; top:76px; left:0; right:0; padding:8px 10px; background:rgba(10,12,16,.94); border:1px solid var(--line); flex-direction:row; flex-wrap:wrap; justify-content:center; align-items:center; gap:3px 8px; }
+  nav a { padding:8px 4px; font-size:10px !important; white-space:nowrap; }
+  nav .nav-cta { margin:0; padding:9px 10px !important; text-align:center; }
+  .hero { height:auto; min-height:720px; }
+  .hero-copy { padding-top:215px; }
+  .hero-text { width:100% !important; font-size:16px !important; line-height:1.65 !important; }
+  h1 { font-size:clamp(60px,18vw,88px); line-height:.88; letter-spacing:-4px; }
+  .hero-bottom { gap:12px; }
+  .show { grid-template-columns:minmax(0,1fr) 28px; padding:22px 6px 22px 0; }
+  .show .date { grid-column:1 / -1; margin-bottom:7px; }
+  .show .show-info { grid-column:1; }
+  .show > a { grid-column:2; grid-row:2; }
+  .show:hover, .show.featured { padding-left:12px; padding-right:12px; }
+  .show-info h3 { overflow-wrap:anywhere; }
+  h2, h3, p, a, span { overflow-wrap:anywhere; }
+  h2 { font-size:clamp(38px,12vw,54px) !important; line-height:1.05 !important; letter-spacing:-2px !important; }
+  .show-info { min-width:0; }
+  .show-info p, .show-info span { white-space:normal; }
+  .menu-detail li { align-items:flex-start; gap:10px; }
+  .menu-detail li span:first-child { min-width:0; }
+  .menu-detail li span:last-child { flex:0 0 auto; }
+  .story-copy { padding:58px 24px; }
+  .story-copy > p:not(.eyebrow) { font-size:16px !important; }
+  .reservation-button { width:100%; justify-content:space-between; padding:19px 20px; gap:16px; }
+  .footer-grid { grid-template-columns:1fr; gap:28px; }
+  .footer-grid .logo { grid-column:auto; }
+  .footer-bottom { gap:10px; flex-direction:column; }
+  .container > div[style*="justify-content:space-between"] { align-items:flex-start !important; flex-direction:column !important; }
+  .container > div[style*="justify-content:space-between"] > p { max-width:none !important; }
+  iframe { height:320px !important; }
+}
