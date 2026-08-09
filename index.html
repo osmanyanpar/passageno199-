@@ -288,6 +288,13 @@
     </div>
     <div class="container footer-bottom"><span>© 2025 PASSAGE N°199</span><span>GECE 19.00 — 03.00</span></div>
   </footer>
+  <script>
+    // Netlify Identity e-postaları ana alan adına döndüğünde, şifre oluşturma
+    // akışını yönetim ekranına aktarır.
+    if (/(?:invite|recovery)_token=/.test(window.location.hash)) {
+      window.location.replace('/admin/' + window.location.hash);
+    }
+  </script>
   <script src="script.js"></script>
   <style>@media(max-width:700px){.hero-microphone{display:none}}</style>
 </body>
