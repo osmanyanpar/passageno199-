@@ -1,0 +1,12 @@
+{
+  "events": [
+    {
+      "date": "21 Ağustos · Cuma",
+      "artist": "Yasin Aydın",
+      "description": "Özel konser gecesi",
+      "video": "YASiN AYDIN KİM O SAKALLI.mp4",
+      "reservationLink": "#rezervasyon",
+      "active": true
+    }
+  ]
+}
