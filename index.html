@@ -292,7 +292,7 @@
     // Netlify Identity e-postaları ana alan adına döndüğünde, şifre oluşturma
     // akışını yönetim ekranına aktarır.
     if (/(?:invite|recovery)_token=/.test(window.location.hash)) {
-      window.location.replace('/admin/' + window.location.hash);
+      window.location.replace('/admin/set-password.html' + window.location.hash);
     }
   </script>
   <script src="script.js"></script>
