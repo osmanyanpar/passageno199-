@@ -1,0 +1,9 @@
+.special-events-section{background:linear-gradient(135deg,#17191e 0%,#0a0c10 78%)}
+.special-events{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.special-event{display:grid;grid-template-columns:minmax(220px,360px) 1fr;align-items:stretch;min-height:420px}
+.special-event>video{display:block;width:100%;height:100%;min-height:420px;object-fit:cover;object-position:center;background:#060709}
+.special-event-copy{padding:clamp(38px,6vw,82px);display:flex;flex-direction:column;justify-content:center}
+.special-event-copy h3{font-size:clamp(54px,7vw,92px);letter-spacing:-4px;line-height:.88}
+.special-event-copy>p:not(.eyebrow){margin:22px 0 0;color:#d1ccc2;font-size:16px;line-height:1.6}
+.special-event-copy .reservation-button{align-self:flex-start;margin-top:34px}
+@media(max-width:700px){.special-event{grid-template-columns:1fr}.special-event>video{min-height:0;max-height:540px;aspect-ratio:4/5}.special-event-copy{padding:38px 24px}.special-event-copy h3{font-size:58px}.special-event-copy .reservation-button{width:auto}}
