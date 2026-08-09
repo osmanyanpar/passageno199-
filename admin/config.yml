@@ -18,7 +18,7 @@ collections:
             widget: list
             fields:
               - { label: "Gün", name: "day", widget: string }
-              - { label: "Kısaltma", name: "short", widget: string }
+              - { label: "Gün kısaltması", name: "short", widget: string }
               - { label: "Sanatçı", name: "artist", widget: string }
               - { label: "Açıklama", name: "note", widget: string, required: false }
       - label: "Özel Etkinlikler"
@@ -33,6 +33,27 @@ collections:
               - { label: "Tarih", name: "date", widget: string }
               - { label: "Sanatçı", name: "artist", widget: string }
               - { label: "Açıklama", name: "description", widget: string, required: false }
-              - { label: "Video dosyası", name: "video", widget: string }
+              - { label: "Video dosyası", name: "video", widget: file }
               - { label: "Rezervasyon bağlantısı", name: "reservationLink", widget: string, default: "#rezervasyon" }
               - { label: "Yayında", name: "active", widget: boolean, default: true }
+  - name: "menus"
+    label: "Menüler"
+    files:
+      - label: "Menü Fiyatları"
+        name: "menu_prices"
+        file: "content/menu.json"
+        format: "json"
+        fields:
+          - label: "Kategoriler"
+            name: "categories"
+            widget: list
+            fields:
+              - { label: "Kategori", name: "title", widget: string }
+              - { label: "Alt başlık", name: "subtitle", widget: string, required: false }
+              - { label: "Bölüm bağlantısı", name: "id", widget: string, required: false }
+              - label: "Ürünler"
+                name: "items"
+                widget: list
+                fields:
+                  - { label: "Ürün", name: "name", widget: string }
+                  - { label: "Fiyat", name: "price", widget: string }
