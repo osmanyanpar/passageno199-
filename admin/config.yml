@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: main
+locale: tr
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: "site"
+    label: "Site İçeriği"
+    files:
+      - label: "Haftalık Program"
+        name: "program"
+        file: "content/program.json"
+        format: "json"
+        fields:
+          - label: "Etkinlikler"
+            name: "shows"
+            widget: list
+            fields:
+              - { label: "Gün", name: "day", widget: string }
+              - { label: "Kısaltma", name: "short", widget: string }
+              - { label: "Sanatçı", name: "artist", widget: string }
+              - { label: "Açıklama", name: "note", widget: string, required: false }
+      - label: "Özel Etkinlikler"
+        name: "special_events"
+        file: "content/special-events.json"
+        format: "json"
+        fields:
+          - label: "Etkinlikler"
+            name: "events"
+            widget: list
+            fields:
+              - { label: "Tarih", name: "date", widget: string }
+              - { label: "Sanatçı", name: "artist", widget: string }
+              - { label: "Açıklama", name: "description", widget: string, required: false }
+              - { label: "Video dosyası", name: "video", widget: string }
+              - { label: "Rezervasyon bağlantısı", name: "reservationLink", widget: string, default: "#rezervasyon" }
+              - { label: "Yayında", name: "active", widget: boolean, default: true }
