@@ -1,0 +1,11 @@
+{
+  "shows": [
+    {"day":"Pazartesi","short":"PZT","artist":"Gökhan Çınar","note":"Canlı müzik"},
+    {"day":"Salı","short":"SAL","artist":"Uğur","note":"Canlı müzik"},
+    {"day":"Çarşamba","short":"ÇAR","artist":"Mertcan Aksu","note":"Canlı müzik"},
+    {"day":"Perşembe","short":"PER","artist":"Kenan","note":"Canlı müzik"},
+    {"day":"Cuma","short":"CUM","artist":"Gökhan Çınar","note":"Canlı müzik"},
+    {"day":"Cumartesi","short":"CMT","artist":"Emre Turan","note":"Canlı müzik"},
+    {"day":"Pazar","short":"PAZ","artist":"Kaan Utku","note":"Canlı müzik"}
+  ]
+}
