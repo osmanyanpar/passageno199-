@@ -48,3 +48,15 @@ fetch('content/special-events.json')
     </article>`).join('');
   })
   .catch(() => {});
+
+fetch('content/menu.json')
+  .then(response => response.ok ? response.json() : Promise.reject(response))
+  .then(({ categories }) => {
+    const container = document.querySelector('.menu-detail-grid');
+    if (!container || !Array.isArray(categories) || !categories.length) return;
+    container.innerHTML = categories.map(category => `<article id="${escapeHtml(category.id || '')}" class="menu-detail${category.id === 'nargile' ? ' menu-highlight' : ''}">
+      <h3>${escapeHtml(category.title || '')}${category.subtitle ? `<small>${escapeHtml(category.subtitle)}</small>` : ''}</h3>
+      <ul>${(category.items || []).map(item => `<li><span>${escapeHtml(item.name || '')}</span><span>${escapeHtml(item.price || '')}</span></li>`).join('')}</ul>
+    </article>`).join('');
+  })
+  .catch(() => {});
