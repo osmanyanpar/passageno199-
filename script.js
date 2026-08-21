@@ -56,7 +56,19 @@ fetch('content/menu.json')
     if (!container || !Array.isArray(categories) || !categories.length) return;
     container.innerHTML = categories.map(category => `<article id="${escapeHtml(category.id || '')}" class="menu-detail${category.id === 'nargile' ? ' menu-highlight' : ''}">
       <h3>${escapeHtml(category.title || '')}${category.subtitle ? `<small>${escapeHtml(category.subtitle)}</small>` : ''}</h3>
-      <ul>${(category.items || []).map(item => `<li><span>${escapeHtml(item.name || '')}</span><span>${escapeHtml(item.price || '')}</span></li>`).join('')}</ul>
+      <ul>${(category.items || []).map(item => `<li><span>${escapeHtml(item.name || '')}${item.description ? `<small style="display:block;color:#aaa69e;margin-top:3px">${escapeHtml(item.description)}</small>` : ''}</span><span>${escapeHtml(item.price || '')}</span></li>`).join('')}</ul>
     </article>`).join('');
+  })
+  .catch(() => {});
+
+fetch('content/contact.yml')
+  .then(response => response.ok ? response.text() : Promise.reject(response))
+  .then(text => {
+    const fields = Object.fromEntries([...text.matchAll(/^([a-zA-Z]+):\s*["']?([^\n"']*)/gm)].map(([, key, value]) => [key, value.trim()]));
+    if (fields.whatsapp) document.querySelectorAll('a[href*="wa.me/"]').forEach(link => {
+      const message = link.href.includes('?') ? link.href.slice(link.href.indexOf('?')) : '';
+      link.href = `https://wa.me/${fields.whatsapp.replace(/\D/g, '')}${message}`;
+    });
+    if (fields.instagram) document.querySelectorAll('a[href*="instagram.com/"]').forEach(link => { link.href = fields.instagram; });
   })
   .catch(() => {});
