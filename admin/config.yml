@@ -57,3 +57,14 @@ collections:
                 fields:
                   - { label: "Ürün", name: "name", widget: string }
                   - { label: "Fiyat", name: "price", widget: string }
+                  - { label: "Açıklama", name: "description", widget: text, required: false }
+  - name: "contact"
+    label: "İletişim"
+    files:
+      - label: "Rezervasyon ve iletişim"
+        name: "contact"
+        file: "content/contact.yml"
+        fields:
+          - { label: "Telefon", name: "phone", widget: string }
+          - { label: "WhatsApp", name: "whatsapp", widget: string }
+          - { label: "Instagram", name: "instagram", widget: string, required: false }
