@@ -1,6 +1,14 @@
 {
   "events": [
     {
+      "date": "4 Eylül · Cuma · Özel Konser",
+      "artist": "Onur Koç",
+      "description": "Onur Koç, özellikle “14 Bahar” ve “Kurşun” gibi hafızalara kazınan şarkılarıyla tanınan, güçlü yorumu ve kendine özgü sesiyle Türk müziğinde iz bırakan sanatçılardan biridir.",
+      "video": "onur-koc-4-eylul.mp4",
+      "reservationLink": "#rezervasyon",
+      "active": true
+    },
+    {
       "date": "21 Ağustos · Cuma",
       "artist": "Yasin Aydın",
       "description": "Özel konser gecesi",
