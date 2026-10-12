@@ -14,7 +14,7 @@ posterDialog?.addEventListener('click', event => {
   if (event.target === posterDialog) posterDialog.close();
 });
 
-fetch('content/program.json')
+fetch('content/program.json?v=20261012-2')
   .then(response => response.ok ? response.json() : Promise.reject(response))
   .then(({ shows }) => {
     const container = document.querySelector('#weekly-program');
@@ -39,7 +39,7 @@ fetch('content/program.json')
   })
   .catch(() => {});
 
-fetch('content/special-events.json')
+fetch('content/special-events.json?v=20261012-2')
   .then(response => response.ok ? response.json() : Promise.reject(response))
   .then(({ events }) => {
     const container = document.querySelector('#special-events');
