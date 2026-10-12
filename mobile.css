@@ -2,10 +2,11 @@
 @media (max-width:700px) {
   html, body { overflow-x:hidden; }
   .container, .nav.container { width:calc(100% - 32px); }
-  .nav .logo { width:170px !important; height:80px !important; transform:translateY(4px) !important; }
+  .nav { align-items:flex-start; }
+  .nav .logo { position:absolute; top:0; left:0; width:170px !important; height:80px !important; margin:0; transform:translateY(0) !important; }
   .nav .logo img { width:346px !important; transform:translate(-92px,-112px) !important; }
   .menu-toggle { display:none !important; }
-  nav { display:flex !important; position:absolute; top:76px; left:0; right:0; padding:8px 10px; background:rgba(10,12,16,.94); border:1px solid var(--line); flex-direction:row; flex-wrap:wrap; justify-content:center; align-items:center; gap:3px 8px; }
+  nav { display:flex !important; position:absolute; top:92px; left:0; right:0; padding:8px 10px; background:rgba(10,12,16,.94); border:1px solid var(--line); flex-direction:row; flex-wrap:wrap; justify-content:center; align-items:center; gap:3px 8px; }
   nav a { padding:8px 4px; font-size:10px !important; white-space:nowrap; }
   nav .nav-cta { margin:0; padding:9px 10px !important; text-align:center; }
   .hero { height:auto; min-height:720px; }
