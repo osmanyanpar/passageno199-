@@ -7,6 +7,12 @@ toggle?.addEventListener('click', () => {
 });
 
 const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[char]);
+const posterDialog = document.querySelector('#poster-lightbox');
+const posterDialogImage = posterDialog?.querySelector('img');
+posterDialog?.querySelector('.poster-close')?.addEventListener('click', () => posterDialog.close());
+posterDialog?.addEventListener('click', event => {
+  if (event.target === posterDialog) posterDialog.close();
+});
 
 fetch('content/program.json')
   .then(response => response.ok ? response.json() : Promise.reject(response))
@@ -15,12 +21,21 @@ fetch('content/program.json')
     if (!container || !Array.isArray(shows)) return;
     container.innerHTML = shows.map((show, index) => {
       const name = escapeHtml(show.artist).replace(/\s+/, '<br /><i>') + (show.artist.includes(' ') ? '</i>' : '');
+      const poster = show.image ? `<button class="show-poster" type="button" data-poster="${escapeHtml(show.image)}" data-poster-alt="${escapeHtml(show.imageAlt || show.artist)}" aria-label="${escapeHtml(show.day)} afişini büyüt"><img src="${escapeHtml(show.thumbnail || show.image)}" alt="${escapeHtml(show.imageAlt || `${show.artist} afişi`)}" loading="eager" decoding="async" /></button>` : '';
       return `<article class="show${index === 0 ? ' featured' : ''}">
         <div class="date"><strong>${escapeHtml(show.short)}</strong><span>HER HAFTA<br />${escapeHtml(show.day).toUpperCase()}</span></div>
         <div class="show-info"><p>${escapeHtml(show.note || 'CANLI MÜZİK')}</p><h3>${name}</h3><span>PASSAGE SAHNESİNDE</span></div>
+        ${poster}
         <a href="#rezervasyon" aria-label="${escapeHtml(show.artist)} için rezervasyon">↗</a>
       </article>`;
     }).join('');
+    container.addEventListener('click', event => {
+      const button = event.target.closest('.show-poster');
+      if (!button || !posterDialog || !posterDialogImage) return;
+      posterDialogImage.src = button.dataset.poster;
+      posterDialogImage.alt = button.dataset.posterAlt || 'Konser afişi';
+      posterDialog.showModal();
+    });
   })
   .catch(() => {});
 

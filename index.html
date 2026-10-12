@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mobile.css" />
   <link rel="stylesheet" href="special-events.css" />
+  <link rel="stylesheet" href="program-posters.css" />
   <style>
     nav{gap:26px}nav a{font-size:12px;letter-spacing:1px;position:relative;padding:13px 2px;transition:color .25s ease}nav a:not(.nav-cta)::after{content:"";position:absolute;left:2px;bottom:7px;width:0;height:2px;background:var(--orange);transition:width .25s ease}nav a:not(.nav-cta):hover{color:var(--orange)}nav a:not(.nav-cta):hover::after{width:calc(100% - 4px)}.nav-cta{padding:14px 20px!important;border-color:var(--orange)!important;background:var(--orange);box-shadow:0 8px 22px rgba(240,90,42,.2);transition:background .25s ease,transform .25s ease,box-shadow .25s ease}.nav-cta:hover{background:#ff6b3b!important;color:#fff;transform:translateY(-2px);box-shadow:0 12px 28px rgba(240,90,42,.35)}.round-link{width:220px;font-size:12px;padding:15px 2px;transition:color .25s ease,border-color .25s ease}.round-link:hover{color:var(--orange);border-color:var(--orange)}.text-link{font-size:12px;font-weight:500;letter-spacing:1px;transition:color .25s ease}.text-link:hover{color:var(--orange)}.reservation-button{font-size:13px;font-weight:500;padding:20px 26px;gap:55px;box-shadow:0 10px 26px rgba(0,0,0,.25)}.reservation-button:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(240,90,42,.3)}.show>a{width:48px;height:48px;border:1px solid rgba(255,255,255,.32);border-radius:50%;display:grid;place-items:center;font-size:22px;transition:background .2s ease,border-color .2s ease,transform .2s ease}.show>a:hover{background:var(--orange);border-color:var(--orange);transform:rotate(45deg)}@media(max-width:700px){nav a{font-size:13px}.nav-cta{padding:13px 16px!important}.round-link{width:205px}.reservation-button{font-size:12px}}
   </style>
@@ -19,6 +20,12 @@
   </style>
   <style>
     .hero{min-height:760px}.hero-text{margin-top:27px;margin-bottom:22px}@media(max-width:700px){.hero{height:790px;min-height:790px}.hero-copy{padding-top:175px}.hero-bottom{bottom:25px}}
+  </style>
+  <style>
+    .nav{position:relative;min-height:96px}
+    .free-entry-banner{display:flex;align-items:center;justify-content:center;min-height:64px;padding:12px 24px;background:var(--orange);color:#fff;text-align:center;position:relative;z-index:3}
+    .free-entry-banner h2{font:700 15px/1.2 Manrope,Arial,sans-serif;letter-spacing:.06em;margin:0;text-shadow:0 2px 18px rgba(0,0,0,.18)}
+    @media(max-width:700px){.nav{min-height:138px}.free-entry-banner{min-height:54px;padding:10px 14px}.free-entry-banner h2{font-size:13px!important;line-height:1.2!important;letter-spacing:.04em!important}}
   </style>
 </head>
 <body>
@@ -35,6 +42,9 @@
       <a class="nav-cta" href="#rezervasyon">REZERVASYON</a>
     </nav>
   </header>
+  <aside class="free-entry-banner" aria-label="Bilgilendirme">
+    <h2>TÜM GİRİŞLERİMİZ ÜCRETSİZDİR</h2>
+  </aside>
 
   <main id="ana-sayfa">
     <section class="hero">
@@ -61,39 +71,46 @@
       </div>
       <div class="shows" id="weekly-program">
         <article class="show featured">
+          <div class="date"><strong>PAZ</strong><span>HER HAFTA<br />PAZAR</span></div>
+          <div class="show-info"><p>CANLI MÜZİK</p><h3>Mazlum</h3><span>PASSAGE SAHNESİNDE</span></div>
+          <button class="show-poster" type="button" data-poster="content/posters/mazlum.jpg" data-poster-alt="Mazlum Keleş konser afişi" aria-label="Pazar afişini büyüt"><img src="content/posters/mazlum.jpg" alt="Mazlum Keleş konser afişi" loading="eager" decoding="async" /></button>
+          <a href="#rezervasyon" aria-label="Mazlum için rezervasyon">↗</a>
+        </article>
+        <article class="show">
           <div class="date"><strong>PZT</strong><span>HER HAFTA<br />PAZARTESİ</span></div>
-          <div class="show-info"><p>CANLI MÜZİK</p><h3>Gökhan<br /><i>Çınar</i></h3><span>PASSAGE SAHNESİNDE</span></div>
-          <a href="#rezervasyon" aria-label="Gökhan Çınar için rezervasyon">↗</a>
+          <div class="show-info"><p>CANLI MÜZİK</p><h3>Ahmet<br /><i>Demirhan</i></h3><span>PASSAGE SAHNESİNDE</span></div>
+          <button class="show-poster" type="button" data-poster="content/posters/ahmet-demirhan.jpg" data-poster-alt="Ahmet Demirhan konser afişi" aria-label="Pazartesi afişini büyüt"><img src="content/posters/ahmet-demirhan.jpg" alt="Ahmet Demirhan konser afişi" loading="eager" decoding="async" /></button>
+          <a href="#rezervasyon" aria-label="Ahmet Demirhan için rezervasyon">↗</a>
         </article>
         <article class="show">
           <div class="date"><strong>SAL</strong><span>HER HAFTA<br />SALI</span></div>
-          <div class="show-info"><p>CANLI MÜZİK</p><h3>Uğur</h3><span>PASSAGE SAHNESİNDE</span></div>
-          <a href="#rezervasyon" aria-label="Uğur için rezervasyon">↗</a>
-        </article>
-        <article class="show">
-          <div class="date"><strong>ÇAR</strong><span>HER HAFTA<br />ÇARŞAMBA</span></div>
           <div class="show-info"><p>CANLI MÜZİK</p><h3>Mertcan<br /><i>Aksu</i></h3><span>PASSAGE SAHNESİNDE</span></div>
+          <button class="show-poster" type="button" data-poster="content/posters/mertcan-aksu.jpg" data-poster-alt="Mertcan Aksu konser afişi" aria-label="Salı afişini büyüt"><img src="content/posters/mertcan-aksu.jpg" alt="Mertcan Aksu konser afişi" loading="eager" decoding="async" /></button>
           <a href="#rezervasyon" aria-label="Mertcan Aksu için rezervasyon">↗</a>
         </article>
         <article class="show">
+          <div class="date"><strong>ÇAR</strong><span>HER HAFTA<br />ÇARŞAMBA</span></div>
+          <div class="show-info"><p>ÖZEL KONSER</p><h3>Her hafta<br /><i>bir konser etkinliği</i></h3><span>KONUK SANATÇI DEĞİŞEBİLİR</span></div>
+          <button class="show-poster" type="button" data-poster="content/posters/carsamba-konser.jpg" data-poster-alt="Çarşamba konser etkinliği afişi" aria-label="Çarşamba afişini büyüt"><img src="content/posters/carsamba-konser.jpg" alt="Çarşamba konser etkinliği afişi" loading="eager" decoding="async" /></button>
+          <a href="#rezervasyon" aria-label="Çarşamba konser etkinliği için rezervasyon">↗</a>
+        </article>
+        <article class="show">
           <div class="date"><strong>PER</strong><span>HER HAFTA<br />PERŞEMBE</span></div>
-          <div class="show-info"><p>CANLI MÜZİK</p><h3>Kenan</h3><span>PASSAGE SAHNESİNDE</span></div>
-          <a href="#rezervasyon" aria-label="Kenan için rezervasyon">↗</a>
+          <div class="show-info"><p>CANLI MÜZİK</p><h3>Kenan<br /><i>Boykan</i></h3><span>PASSAGE SAHNESİNDE</span></div>
+          <button class="show-poster" type="button" data-poster="content/posters/kenan-boykan.jpg" data-poster-alt="Kenan Boykan konser afişi" aria-label="Perşembe afişini büyüt"><img src="content/posters/kenan-boykan.jpg" alt="Kenan Boykan konser afişi" loading="eager" decoding="async" /></button>
+          <a href="#rezervasyon" aria-label="Kenan Boykan için rezervasyon">↗</a>
         </article>
         <article class="show featured">
           <div class="date"><strong>CUM</strong><span>HER HAFTA<br />CUMA</span></div>
-          <div class="show-info"><p>ÖZEL GECE</p><h3>Her Hafta<br /><i>Konser</i></h3><span>CANLI PERFORMANS</span></div>
-          <a href="#rezervasyon" aria-label="Cuma konseri için rezervasyon">↗</a>
+          <div class="show-info"><p>CANLI MÜZİK</p><h3>Niyazi<br /><i>Gül</i></h3><span>PASSAGE SAHNESİNDE</span></div>
+          <button class="show-poster" type="button" data-poster="content/posters/niyazi-gul.jpg" data-poster-alt="Niyazi Gülbay konser afişi" aria-label="Cuma afişini büyüt"><img src="content/posters/niyazi-gul.jpg" alt="Niyazi Gülbay konser afişi" loading="eager" decoding="async" /></button>
+          <a href="#rezervasyon" aria-label="Niyazi Gül için rezervasyon">↗</a>
         </article>
         <article class="show">
           <div class="date"><strong>CMT</strong><span>HER HAFTA<br />CUMARTESİ</span></div>
           <div class="show-info"><p>CANLI MÜZİK</p><h3>Emre<br /><i>Turan</i></h3><span>PASSAGE SAHNESİNDE</span></div>
+          <button class="show-poster" type="button" data-poster="content/posters/emre-turan.jpg" data-poster-alt="Emre Turan konser afişi" aria-label="Cumartesi afişini büyüt"><img src="content/posters/emre-turan.jpg" alt="Emre Turan konser afişi" loading="eager" decoding="async" /></button>
           <a href="#rezervasyon" aria-label="Emre Turan için rezervasyon">↗</a>
-        </article>
-        <article class="show">
-          <div class="date"><strong>PAZ</strong><span>HER HAFTA<br />PAZAR</span></div>
-          <div class="show-info"><p>CANLI MÜZİK</p><h3>Kaan<br /><i>Utku</i></h3><span>PASSAGE SAHNESİNDE</span></div>
-          <a href="#rezervasyon" aria-label="Kaan Utku için rezervasyon">↗</a>
         </article>
         <article class="show featured">
           <div class="date"><strong>07</strong><span>AĞUSTOS 2026<br />CUMA</span></div>
@@ -101,6 +118,10 @@
           <a href="#gokce-kirkiz" aria-label="Gökce Kırgız konser videosunu izle">↗</a>
         </article>
       </div>
+      <dialog class="poster-lightbox" id="poster-lightbox" aria-label="Konser afişi">
+        <button class="poster-close" type="button" aria-label="Kapat">×</button>
+        <img src="" alt="" />
+      </dialog>
       <a class="text-link" href="#iletisim">TÜM PROGRAMI GÖR <span>→</span></a>
     </section>
 
@@ -275,7 +296,7 @@
         <div><p class="eyebrow"><span></span> BİZE ULAŞIN</p><h2 id="harita-baslik" style="font-size:clamp(42px,5vw,68px);letter-spacing:-3px;line-height:1">Bizi <i style="color:var(--orange)">bul.</i></h2></div>
         <a class="text-link" style="margin-top:0" target="_blank" rel="noopener" href="https://share.google/MsIXe9FynHytyfe4X">PASSAGE N°199 KONUMUNU AÇ <span>↗</span></a>
       </div>
-      <iframe title="PASSAGE N°199 konumu" src="https://www.google.com/maps?q=PASSAGE%20N%C2%B0199%2C%20Gazima%C4%9Fusa%2C%20KKTC&output=embed" width="100%" height="420" style="border:0;display:block;filter:grayscale(1) contrast(1.1) brightness(.82)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe title="PASSAGE N°199 konumu" src="https://www.google.com/maps?q=PASSAGE%20N%C2%B0199%2C%20Gazima%C4%9Fusa%2C%20KKTC&output=embed" width="100%" height="420" style="border:0;display:block;filter:grayscale(1) contrast(1.1) brightness(.82)" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
 

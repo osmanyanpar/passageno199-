@@ -1,11 +1,11 @@
 {
   "shows": [
-    {"day":"Pazartesi","short":"PZT","artist":"Gökhan Çınar","note":"Canlı müzik"},
-    {"day":"Salı","short":"SAL","artist":"Uğur","note":"Canlı müzik"},
-    {"day":"Çarşamba","short":"ÇAR","artist":"Mertcan Aksu","note":"Canlı müzik"},
-    {"day":"Perşembe","short":"PER","artist":"Kenan","note":"Canlı müzik"},
-    {"day":"Cuma","short":"CUM","artist":"Gökhan Çınar","note":"Canlı müzik"},
-    {"day":"Cumartesi","short":"CMT","artist":"Emre Turan","note":"Canlı müzik"},
-    {"day":"Pazar","short":"PAZ","artist":"Kaan Utku","note":"Canlı müzik"}
+    {"day":"Pazar","short":"PAZ","artist":"Mazlum","note":"Canlı müzik","image":"content/posters/mazlum.jpg","thumbnail":"content/posters/thumbs/mazlum.jpg","imageAlt":"Mazlum Keleş konser afişi"},
+    {"day":"Pazartesi","short":"PZT","artist":"Ahmet Demirhan","note":"Canlı müzik","image":"content/posters/ahmet-demirhan.jpg","thumbnail":"content/posters/thumbs/ahmet-demirhan.jpg","imageAlt":"Ahmet Demirhan konser afişi"},
+    {"day":"Salı","short":"SAL","artist":"Mertcan Aksu","note":"Canlı müzik","image":"content/posters/mertcan-aksu.jpg","thumbnail":"content/posters/thumbs/mertcan-aksu.jpg","imageAlt":"Mertcan Aksu konser afişi"},
+    {"day":"Çarşamba","short":"ÇAR","artist":"Her hafta bir konser etkinliği","note":"Özel konser","image":"content/posters/carsamba-konser.jpg","thumbnail":"content/posters/thumbs/carsamba-konser.jpg","imageAlt":"Çarşamba konser etkinliği afişi"},
+    {"day":"Perşembe","short":"PER","artist":"Kenan Boykan","note":"Canlı müzik","image":"content/posters/kenan-boykan.jpg","thumbnail":"content/posters/thumbs/kenan-boykan.jpg","imageAlt":"Kenan Boykan konser afişi"},
+    {"day":"Cuma","short":"CUM","artist":"Niyazi Gül","note":"Canlı müzik","image":"content/posters/niyazi-gul.jpg","thumbnail":"content/posters/thumbs/niyazi-gul.jpg","imageAlt":"Niyazi Gülbay konser afişi"},
+    {"day":"Cumartesi","short":"CMT","artist":"Emre Turan","note":"Canlı müzik","image":"content/posters/emre-turan.jpg","thumbnail":"content/posters/thumbs/emre-turan.jpg","imageAlt":"Emre Turan konser afişi"}
   ]
 }
